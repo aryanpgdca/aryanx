@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Aryan Porwal — Technology Sales Professional, MBA (Marketing) Candidate.">
+<title>Aryan Porwal | Technology Sales Professional</title>
+<style>
+:root{
+  --navy:#061942; --blue:#0877f9; --cyan:#28c8ff; --ink:#15203b; --muted:#5d6780;
+  --line:#dce7f6; --card:#ffffff; --soft:#f4f8ff; --shadow:0 16px 45px rgba(9,42,91,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;background:#f5f8fd;color:var(--ink);line-height:1.55}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:auto}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(4,19,48,.90);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.12)}
+.nav-inner{height:70px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.25rem;font-weight:900;letter-spacing:.08em;color:#fff}
+.logo span{color:var(--cyan)}
+.nav-links{display:flex;gap:26px;color:#dbe8ff;font-size:.88rem;font-weight:700}
+.nav-links a:hover{color:#fff}
+.menu{display:none;background:none;border:0;color:white;font-size:1.6rem}
+.hero{min-height:680px;padding:125px 0 70px;position:relative;overflow:hidden;color:white;background:
+radial-gradient(circle at 82% 25%,rgba(38,183,255,.38),transparent 26%),
+linear-gradient(120deg,#031331 0%,#092b62 52%,#061735 100%)}
+.hero:before,.hero:after{content:"";position:absolute;inset:auto;pointer-events:none}
+.hero:before{width:520px;height:520px;right:-150px;top:50px;border:1px solid rgba(72,202,255,.28);transform:rotate(32deg);box-shadow:0 0 80px rgba(0,153,255,.15)}
+.hero:after{width:360px;height:700px;right:34%;top:-180px;background:linear-gradient(140deg,transparent 45%,rgba(0,131,255,.12) 46%,transparent 47%)}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:50px;align-items:center;position:relative;z-index:2}
+.kicker{font-size:.83rem;letter-spacing:.22em;text-transform:uppercase;color:#d6e8ff;margin-bottom:14px}
+.kicker b{color:var(--cyan)}
+h1{font-size:clamp(3.3rem,8vw,6.8rem);line-height:.86;letter-spacing:-.06em;font-weight:950;text-transform:uppercase}
+h1 .blue{color:#1597ff}
+.role{font-size:clamp(1.2rem,2.3vw,2rem);font-weight:700;margin:22px 0 15px}
+.role span{color:var(--cyan)}
+.badge{display:inline-block;background:rgba(16,130,247,.24);border:1px solid rgba(83,202,255,.7);padding:7px 15px;border-radius:999px;font-size:.78rem;letter-spacing:.12em;font-weight:800}
+.hero-copy{max-width:650px;color:#dbe8f8;margin-top:18px;font-size:1.04rem}
+.hero-actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:10px;font-weight:800;border:1px solid rgba(255,255,255,.2)}
+.btn.primary{background:#fff;color:#07316d}.btn.secondary{background:rgba(255,255,255,.08);color:#fff}
+.hero-card{min-height:420px;border:1px solid rgba(255,255,255,.2);border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.03));box-shadow:0 30px 70px rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;padding:35px;position:relative;overflow:hidden}
+.hero-card:before{content:"";position:absolute;width:290px;height:290px;border-radius:50%;background:rgba(29,171,255,.24);filter:blur(4px);top:-80px;right:-60px}
+.laptop{width:92%;aspect-ratio:1.45/1;border-radius:14px 14px 7px 7px;background:linear-gradient(145deg,#10233e,#020b18);border:5px solid #9fb3ca;box-shadow:0 35px 50px rgba(0,0,0,.4);transform:perspective(700px) rotateY(-13deg) rotateX(5deg);position:relative;display:flex;align-items:center;justify-content:center}
+.laptop:after{content:"";position:absolute;left:-9%;right:-9%;bottom:-18px;height:18px;background:linear-gradient(#879ab0,#34465a);border-radius:0 0 16px 16px}
+.laptop span{font-size:2rem;font-weight:900;letter-spacing:.05em;color:#e8f3ff}
+.float{position:absolute;right:28px;bottom:28px;background:#fff;color:#142447;padding:13px 17px;border-radius:12px;font-size:.8rem;font-weight:800;box-shadow:var(--shadow)}
+.contact-bar{margin-top:-28px;position:relative;z-index:5}
+.contact-grid{background:#fff;border-radius:16px;box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden}
+.contact-item{padding:18px 20px;border-right:1px solid var(--line);display:flex;gap:12px;align-items:center;font-size:.9rem}
+.contact-item:last-child{border:0}.icon{width:34px;height:34px;border-radius:10px;background:#eaf3ff;color:#0757ba;display:grid;place-items:center;font-weight:900;flex:none}
+.contact-item small{display:block;color:var(--muted);font-size:.7rem;margin-top:1px}
+.section{padding:80px 0}
+.section-title{display:flex;align-items:center;gap:14px;margin-bottom:28px}
+.section-title .mark{width:43px;height:43px;border-radius:12px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:900}
+.section-title h2{font-size:1.35rem;text-transform:uppercase;letter-spacing:.03em}
+.section-title:after{content:"";height:2px;flex:1;background:linear-gradient(90deg,#0b66d4,#dbe7f5)}
+.card{background:var(--card);border:1px solid #e4ebf5;border-radius:18px;box-shadow:var(--shadow)}
+.about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:22px}
+.about-card{padding:28px}.about-card p+p{margin-top:14px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+.stat{padding:18px 14px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(#fff,#f8fbff)}
+.stat strong{display:block;font-size:1.7rem;color:#075cc6}.stat b{display:block;color:#0a3981}.stat span{font-size:.78rem;color:var(--muted)}
+.grid-2{display:grid;grid-template-columns:1.3fr .7fr;gap:22px}
+.timeline{padding:25px}
+.item{position:relative;padding:0 0 25px 28px;margin-left:4px;border-left:2px solid #bdd7f7}
+.item:last-child{padding-bottom:0}.item:before{content:"";position:absolute;left:-7px;top:3px;width:11px;height:11px;border-radius:50%;background:#0a6be8;border:3px solid #dcecff}
+.item h3{font-size:1rem}.company{font-weight:800;color:#0a61c8}.date{font-size:.78rem;color:var(--muted)}
+.item ul{margin:8px 0 0 18px;color:#4f5a70;font-size:.87rem}
+.edu{padding:24px}.edu-item{padding:0 0 23px 0;margin-bottom:22px;border-bottom:1px solid var(--line)}.edu-item:last-child{border:0;margin:0;padding:0}
+.edu-item h3{font-size:1rem}.edu-item .school{font-weight:800;color:#0b5dbb}.edu-tags,.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px}
+.edu-tags span,.chip{font-size:.72rem;background:#eaf4ff;color:#164f9a;padding:5px 9px;border-radius:999px}
+.cert-card{padding:23px}.cert{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.cert:last-child{border:0}.cert-logo{width:32px;height:32px;border-radius:8px;background:#edf5ff;color:#0a68d7;display:grid;place-items:center;font-weight:900}.cert b{font-size:.82rem;display:block}.cert small{color:var(--muted)}
+.skills-tools{display:grid;grid-template-columns:1fr .9fr;gap:22px}.skill-card,.tool-card,.connect-card{padding:24px}.chips{gap:8px}.chip{font-size:.76rem}
+.tools{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:14px}.tool{border:1px solid var(--line);border-radius:13px;padding:14px;text-align:center;font-weight:800;background:#fbfdff}.tool span{display:block;font-size:1.6rem;margin-bottom:4px;color:#0874e8}
+.connect{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px}.connect-card p{color:#5a6479}.contact-links{margin-top:18px;display:grid;gap:10px}.contact-links a{font-weight:700;color:#0a5db7}
+footer{background:#041632;color:#dce8fb;text-align:center;padding:38px 0;margin-top:30px}.footer-big{font-weight:900;letter-spacing:.25em;font-size:.85rem}.footer-big span{color:#1baaff}
+.reveal{opacity:0;transform:translateY(22px);transition:.7s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:900px){
+ .nav-links{display:none}.menu{display:block}.hero-grid,.about-grid,.grid-2,.skills-tools,.connect{grid-template-columns:1fr}.hero{padding-top:110px}.hero-card{min-height:330px}.contact-grid{grid-template-columns:1fr 1fr}.contact-item:nth-child(2){border-right:0}.contact-item:nth-child(-n+2){border-bottom:1px solid var(--line)}
+}
+@media(max-width:600px){
+ .container{width:94%}.hero{min-height:auto;padding-bottom:55px}h1{font-size:3.5rem}.hero-card{display:none}.contact-grid{grid-template-columns:1fr}.contact-item{border-right:0!important;border-bottom:1px solid var(--line)!important}.contact-item:last-child{border-bottom:0!important}.stats{grid-template-columns:1fr 1fr}.section{padding:55px 0}.tools{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="logo" href="#home">ARYAN<span>.</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a>
+    </div>
+    <button class="menu" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker">Technology <b>|</b> People <b>|</b> Solutions <b>|</b> Growth</div>
+      <h1>Aryan<br><span class="blue">Porwal</span></h1>
+      <div class="role">Technology Sales <span>Professional</span></div>
+      <div class="badge">MBA (MARKETING) CANDIDATE</div>
+      <p class="hero-copy">Passionate about technology, customer experience and business growth. Helping individuals and businesses find the right technology solutions through consultative and value-driven selling.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#contact">Let's Connect</a>
+        <a class="btn secondary" href="#portfolio-visual">View Portfolio Design</a><a class="btn secondary" href="#experience">View Experience</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="laptop"><span>ASUS</span></div>
+      <div class="float">LEARN · ADAPT · SOLVE · <b>GROW</b></div>
+    </div>
+  </div>
+</header>
+
+<div class="container contact-bar">
+  <div class="contact-grid">
+    <a class="contact-item" href="https://www.linkedin.com/in/aryanporwaal" target="_blank"><span class="icon">in</span><div>linkedin.com/in/aryanporwaal</div></a>
+    <a class="contact-item" href="mailto:aryanporwaal@gmail.com"><span class="icon">✉</span><div>aryanporwaal@gmail.com</div></a>
+    <div class="contact-item"><span class="icon">⌖</span><div>Noida, Uttar Pradesh, India</div></div>
+    <a class="contact-item" href="mailto:aryanporwaal@gmail.com?subject=Career%20Opportunity"><span class="icon">▣</span><div><b>Open to Opportunities</b><small>On-site | Hybrid | Remote</small></div></a>
+  </div>
+</div>
+
+
+<section class="portfolio-visual" id="portfolio-visual">
+  <div class="container">
+    <div class="pv-heading">
+      <span>MY PORTFOLIO</span>
+      <h2>Technology · Marketing · Impact</h2>
+      <p>The portfolio visual below is the design reference for this website.</p>
+    </div>
+    <div class="pv-frame">
+      <img src="assets/aryan-portfolio-reference.png" alt="Aryan Porwal professional portfolio" loading="lazy">
+    </div>
+  </div>
+</section>
+<style>
+.portfolio-visual{padding:72px 0;background:linear-gradient(180deg,#eef5ff 0%,#f8fbff 100%)}
+.pv-heading{text-align:center;margin-bottom:28px}
+.pv-heading span{font-size:.72rem;letter-spacing:.22em;font-weight:900;color:#0877f9}
+.pv-heading h2{margin:8px 0 7px;font-size:clamp(1.7rem,3vw,2.6rem);color:#071b45}
+.pv-heading p{color:#64708a}
+.pv-frame{max-width:1050px;margin:auto;background:#fff;padding:10px;border-radius:22px;box-shadow:0 25px 70px rgba(7,39,88,.18);border:1px solid #dce7f6}
+.pv-frame img{display:block;width:100%;height:auto;border-radius:15px}
+</style>
+
+<main class="container">
+<section class="section reveal" id="about">
+  <div class="section-title"><div class="mark">●</div><h2>About Me</h2></div>
+  <div class="about-card card">
+    <p>I am a <b>Technology Sales Professional</b> with experience in technology consulting, business development, and customer engagement. Currently working as an ASUS Solution Expert, I help customers identify the right technology solutions by understanding their needs and delivering a personalized, solution-oriented buying experience.</p>
+    <p>I am pursuing an <b>MBA (Marketing)</b> and strengthening my expertise in marketing strategy, consumer behavior, and business management. With an academic background in Computer Science, I bring a balanced perspective that bridges technology and business.</p>
+    <div class="stats">
+      <div class="stat"><strong>2+</strong><b>Years</b><span>Professional Experience</span></div>
+      <div class="stat"><strong>3</strong><b>Degrees</b><span>Computer Science & Marketing</span></div>
+      <div class="stat"><strong>10+</strong><b>Certifications</b><span>Data, Analytics, Sales & Tools</span></div>
+      <div class="stat"><strong>500+</strong><b>Connections</b><span>Building Meaningful Relationships</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" id="experience">
+  <div class="grid-2">
+    <div>
+      <div class="section-title"><div class="mark">▣</div><h2>Professional Experience</h2></div>
+      <div class="timeline card">
+        <div class="item"><h3>ASUS Solution Expert</h3><div class="company">ASUS · Full-time</div><div class="date">Jul 2025 – Present · Noida, UP (On-site)</div><ul><li>Helping customers choose the right ASUS solutions</li><li>Consultative and solution-oriented selling</li><li>Building long-term customer relationships</li></ul></div>
+        <div class="item"><h3>Senior Executive</h3><div class="company">Bose Corporation · Full-time</div><div class="date">Apr 2024 – Jun 2025 · Noida, UP (On-site)</div><ul><li>Delivered exceptional customer experiences</li><li>Demonstrated premium Bose audio solutions</li><li>Drove sales through product expertise & personalization</li></ul></div>
+        <div class="item"><h3>Executive</h3><div class="company">Flipkart · Full-time</div><div class="date">Aug 2023 – Mar 2024 · Gurugram, HR (On-site)</div><ul><li>Managed inbound warehouse operations</li><li>Ensured inventory accuracy & stock verification</li><li>Collaborated with cross-functional teams</li></ul></div>
+        <div class="item"><h3>Java Developer</h3><div class="company">Bytecode · Internship</div><div class="date">Apr 2023 – Oct 2023 · Kanpur, UP (Hybrid)</div><ul><li>Developed and maintained Java-based applications</li><li>Worked on database integration & debugging</li><li>Followed best practices in software development</li></ul></div>
+        <div class="item"><h3>PHP Web Developer</h3><div class="company">RAMAVI PVT. LTD. · Internship</div><div class="date">Apr 2022 – Sep 2022 · Kanpur, UP (Hybrid)</div><ul><li>Built and customized dynamic web applications</li><li>Implemented backend functionality using PHP & MySQL</li><li>Improved application performance and user experience</li></ul></div>
+      </div>
+    </div>
+    <div id="education">
+      <div class="section-title"><div class="mark">◆</div><h2>Education</h2></div>
+      <div class="edu card">
+        <div class="edu-item"><h3>Master of Business Administration (MBA - Marketing)</h3><div class="school">Chhatrapati Shahu Ji Maharaj University</div><div class="date">Jul 2025 – Jun 2027 · Kanpur, Uttar Pradesh</div><div class="edu-tags"><span>Marketing Strategy</span><span>Consumer Behavior</span><span>Business Development</span><span>Digital Marketing</span></div></div>
+        <div class="edu-item"><h3>Post Graduate Diploma (Computer Application)</h3><div class="school">Government Polytechnic Institute</div><div class="date">Aug 2021 – Aug 2023 · Kanpur, Uttar Pradesh</div><div class="edu-tags"><span>Computer Science</span><span>DBMS</span><span>Web Technologies</span><span>Programming Fundamentals</span></div></div>
+        <div class="edu-item"><h3>Bachelor of Science (B.Sc. - Computer Science)</h3><div class="school">Chhatrapati Shahu Ji Maharaj University</div><div class="date">2018 – 2021 · Kanpur, Uttar Pradesh</div><div class="edu-tags"><span>Programming</span><span>Databases</span><span>Operating Systems</span><span>Networking</span><span>Software Development</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" id="certifications">
+  <div class="section-title"><div class="mark">⚙</div><h2>Certifications</h2></div>
+  <div class="cert-card card">
+    <div class="cert"><div class="cert-logo">D</div><div><b>Deloitte Australia – Data Analytics Job Simulation</b><small>Forage · May 2025</small></div></div>
+    <div class="cert"><div class="cert-logo">SQL</div><div><b>Introduction to SQL</b><small>Simplilearn</small></div></div>
+    <div class="cert"><div class="cert-logo">G</div><div><b>Google Slides</b><small>Google Cloud Community · May 2025</small></div></div>
+    <div class="cert"><div class="cert-logo">J</div><div><b>Java</b><small>Simplilearn</small></div></div>
+    <div class="cert"><div class="cert-logo">SQL</div><div><b>SQL for Data Analysis</b><small>Simplilearn</small></div></div>
+    <div class="cert"><div class="cert-logo">MS</div><div><b>Microsoft Database Fundamentals</b><small>Simplilearn</small></div></div>
+    <div class="cert"><div class="cert-logo">BI</div><div><b>Power BI Data Modelling</b><small>Udemy</small></div></div>
+    <div class="cert"><div class="cert-logo">EX</div><div><b>Business Analytics with Excel</b><small>Udemy</small></div></div>
+  </div>
+</section>
+
+<section class="section reveal" id="skills">
+  <div class="skills-tools">
+    <div>
+      <div class="section-title"><div class="mark">★</div><h2>Key Skills</h2></div>
+      <div class="skill-card card">
+        <div class="chips">
+          <span class="chip">Technology Sales</span><span class="chip">Business Development</span><span class="chip">Technology Consulting</span><span class="chip">Customer Engagement</span><span class="chip">Marketing Strategy</span><span class="chip">Consumer Behavior</span><span class="chip">Data Analysis</span><span class="chip">SQL & MySQL</span><span class="chip">Power BI</span><span class="chip">Excel</span><span class="chip">Java</span><span class="chip">PHP</span><span class="chip">Web Development</span><span class="chip">CRM</span><span class="chip">Problem Solving</span><span class="chip">Communication</span><span class="chip">Relationship Management</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="section-title"><div class="mark">⚒</div><h2>Tools & Technologies</h2></div>
+      <div class="tool-card card"><div class="tools">
+        <div class="tool"><span>▣</span>Excel</div><div class="tool"><span>▥</span>Power BI</div><div class="tool"><span>◉</span>MySQL</div><div class="tool"><span>J</span>Java</div><div class="tool"><span>PHP</span>PHP</div><div class="tool"><span>SQL</span>SQL</div><div class="tool"><span>☁</span>Google Cloud</div><div class="tool"><span>▦</span>MS Office</div><div class="tool"><span>☁</span>Salesforce</div>
+      </div><p style="margin-top:15px;text-align:center;color:#6a7487;font-size:.8rem">+ More Tools & Technologies</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" id="contact">
+  <div class="section-title"><div class="mark">➤</div><h2>Let's Connect</h2></div>
+  <div class="connect">
+    <div class="connect-card card">
+      <h3>Open to meaningful opportunities.</h3>
+      <p style="margin-top:10px">I’m always open to connecting with professionals, recruiters, and industry leaders to exchange ideas and explore new opportunities.</p>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/aryanporwaal" target="_blank">↗ linkedin.com/in/aryanporwaal</a>
+        <a href="mailto:aryanporwaal@gmail.com">✉ aryanporwaal@gmail.com</a>
+        <span>⌖ Noida, Uttar Pradesh, India</span>
+      </div>
+    </div>
+    <div class="connect-card card">
+      <h3>Start a conversation</h3>
+      <form onsubmit="sendMail(event)">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:15px">
+          <input id="name" required placeholder="Your name">
+          <input id="email" type="email" required placeholder="Your email">
+        </div>
+        <input id="subject" required placeholder="Subject" style="width:100%;margin-top:12px">
+        <textarea id="message" required placeholder="Your message" rows="5" style="width:100%;margin-top:12px;resize:vertical"></textarea>
+        <button class="btn primary" style="margin-top:12px;border:0;cursor:pointer" type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-big">“ EXPLORING OPPORTUNITIES · BUILDING SOLUTIONS · <span>GROWING TOGETHER</span> ”</div>
+  <p style="margin-top:10px;font-size:.78rem;opacity:.7">© <span id="year"></span> Aryan Porwal. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleMenu(){
+  const n=document.querySelector('.nav-links');
+  n.style.display=n.style.display==='flex'?'none':'flex';
+  if(n.style.display==='flex'){n.style.position='absolute';n.style.top='70px';n.style.left='0';n.style.right='0';n.style.padding='20px';n.style.background='#061942';n.style.flexDirection='column';}
+}
+function sendMail(e){
+  e.preventDefault();
+  const n=document.getElementById('name').value;
+  const em=document.getElementById('email').value;
+  const s=document.getElementById('subject').value;
+  const m=document.getElementById('message').value;
+  location.href='mailto:aryanporwaal@gmail.com?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent('Name: '+n+'\nEmail: '+em+'\n\n'+m);
+}
+document.getElementById('year').textContent=new Date().getFullYear();
+const obs=new IntersectionObserver(entries=>entries.forEach(x=>x.isIntersecting&&x.target.classList.add('show')),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));
+</script>
+</body>
+</html>
